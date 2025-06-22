@@ -1,6 +1,7 @@
 import os
 import sys
 import django
+from decouple import config
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -17,7 +18,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 BOT_TOKEN = config("BOT_TOKEN")
-API_URL = "http://127.0.0.1:8000/logs/"  # Adjust this URL as needed
+API_URL = config("API_BASE_URL")  # Adjust this URL as needed
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
