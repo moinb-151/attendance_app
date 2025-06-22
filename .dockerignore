@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django static files (can be generated)
+staticfiles/
+static/
+
+# Django media files (if not using external storage like S3)
+media/
+
+# Logs
+*.log
+
+# Local development files
+*.sqlite3
+*.db
+.env
+.env.*
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
